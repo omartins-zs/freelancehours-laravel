@@ -1,0 +1,58 @@
+php -v
+
+php -r "echo 'oi';"
+php -r "echo 'Olha que legal';"
+
+php -r "echo 'oi';"
+php -r "echo 'Olha que legal -- ' . rand();"
+
+```bash
+php -r "echo 'Oi, mundo!';"
+```
+
+php -S localhost:8888
+
+
+
+composer global require laravel/installer
+ 
+laravel new 
+
+
+ Would you like to install a starter kit? [No starter kit]:
+  [none     ] No starter kit
+  [breeze   ] Laravel Breeze
+  [jetstream] Laravel Jetstream
+ > none
+
+
+ Which testing framework do you prefer? [Pest]:
+  [0] Pest
+  [1] PHPUnit
+ > 0
+
+
+ Would you like to initialize a Git repository? (yes/no) [no]:
+ > yes
+ 
+
+ Which database will your application use? [SQLite]:
+  [sqlite ] SQLite
+  [mysql  ] MySQL
+  [mariadb] MariaDB
+  [pgsql  ] PostgreSQL (Missing PDO extension)
+  [sqlsrv ] SQL Server (Missing PDO extension)
+ > sqlite
+
+
+ Would you like to run the default database migrations? (yes/no) [yes]:
+ > yes
+ 
+cd freelance-hours
+
+http://freelance-hours.test/
+
+
+git config --global user.email "gabrielmatheus209@gmail.com	"
+
+git config --global user.name "omartins-zs"
