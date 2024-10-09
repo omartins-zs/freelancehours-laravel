@@ -10,16 +10,13 @@ class WelcomeController extends Controller
 
     public function __invoke(Request $request)
     {
-        $user = User::query()->create([
-            'name' => 'Gabriel Matheus',
-            'email' => 'gabriel@email.com',
-            'password' => 'password',
-        ]);
 
-        var_dump($user);
-        dump($user);
+        $user = User::find(1);
+        // var_dump($user);
+        // dump($user);
         // Dump and Die
-        dd($user);
+        dump($user);
+        dd($user->email_verified_at);
 
         return view('teste.jorge');
     }
