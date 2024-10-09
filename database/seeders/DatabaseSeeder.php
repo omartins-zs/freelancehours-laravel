@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->count(20)->create();
+        User::factory()->count(100)->create();
 
-        Project::factory()->count(20)->create();
+        User::query()->inRandomOrder()->limit(10)->get()->each(fn(User $u) => Project::factory()->create(['created_by' => $u->id]));
 
         // Cria um usuário específico
         // User::factory()->create([
