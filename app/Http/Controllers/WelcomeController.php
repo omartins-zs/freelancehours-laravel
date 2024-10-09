@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class WelcomeController extends Controller
 {
@@ -17,7 +18,7 @@ class WelcomeController extends Controller
         $user->email_verified_at = now();
         $user->save();
 
-        dd($user->email_verified_at->diffForHumans());
+        // dd($user->email_verified_at->diffForHumans());
 
         //  Exemplo 2
         $user->update([
@@ -26,7 +27,9 @@ class WelcomeController extends Controller
 
         dump($user->email_verified_at);
 
-        dd($user->email_verified_at->diffForHumans());
+        // dd($user->email_verified_at->diffForHumans());
+
+        Auth::login($user);
 
         return view('teste.jorge');
     }
