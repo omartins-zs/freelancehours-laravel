@@ -12,12 +12,21 @@ class WelcomeController extends Controller
     {
 
         $user = User::find(1);
-        // 1°Opção
+
+        //  Exemplo 1
         $user->email_verified_at = now();
         $user->save();
 
-        // 2°Opção
-        $user->update(['email_verified_at' => now()]);
+        dd($user->email_verified_at->diffForHumans());
+
+        //  Exemplo 2
+        $user->update([
+            'email_verified_at' => now()->subMonths(10)
+        ]);
+
+        dump($user->email_verified_at);
+
+        dd($user->email_verified_at->diffForHumans());
 
         return view('teste.jorge');
     }
