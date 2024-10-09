@@ -19,7 +19,7 @@ return new class extends Migration
             $table->datetime('ends_at');
             $table->string('status')->default('open');
             $table->json('tech_stack')->default(0);
-            $table->foreignIdFor(User::class, 'created_by')->constrained();
+            $table->foreignIdFor(User::class, 'created_by')->constrained('users');
             $table->timestamps();
         });
     }
