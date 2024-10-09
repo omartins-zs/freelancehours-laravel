@@ -15,8 +15,8 @@ php -S localhost:8888
 
 
 composer global require laravel/installer
- 
-laravel new 
+
+laravel new
 
 
  Would you like to install a starter kit? [No starter kit]:
@@ -34,7 +34,7 @@ laravel new
 
  Would you like to initialize a Git repository? (yes/no) [no]:
  > yes
- 
+
 
  Which database will your application use? [SQLite]:
   [sqlite ] SQLite
@@ -47,12 +47,50 @@ laravel new
 
  Would you like to run the default database migrations? (yes/no) [yes]:
  > yes
- 
+
 cd freelance-hours
 
 http://freelance-hours.test/
+
+php artisan serve
+
+php artisan make:model
+php artisan route:list
+
+php artisan about
+
+php artisan |grep model
+php artisan model:show User
+
+composer require livewire/livewire
+
+php artisan livewire:layout
+
+php artisan livewire:make Teste
+
+Extensao
+Laravel Blade Snippets
+Php Intelephensense
+
+npm install
+
+npm run build
+
 
 
 git config --global user.email "gabrielmatheus209@gmail.com	"
 
 git config --global user.name "omartins-zs"
+
+Utilitarios
+
+PHP Carbon
+
+Livewire
+
+Herd
+
+Composer
+
+Node JS
+
