@@ -9,7 +9,7 @@
         </div>
         <div>
             <div class="text-white text-[14px] font-bold tracking-wide">
-                {{ $proposal->author }}
+                {{ $proposal->email }}
             </div>
             <div class="text-[#8C8C9A] text-[12px]">
                 Enviado {{ $proposal->created_at->diffForHumans() }}
