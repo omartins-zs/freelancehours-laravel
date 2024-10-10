@@ -4,7 +4,11 @@ export default {
       "./resources/**/*.blade.php",
     ],
     theme: {
-      extend: {},
+      extend: {
+        font:{
+            sans:['Segoe UI','sans-serif']
+        }
+      },
     },
     plugins: [],
   }
