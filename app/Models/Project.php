@@ -14,6 +14,6 @@ class Project extends Model
 
     public function casts()
     {
-        return ['tech_stack' => 'array', 'status' => ProjectStatus::class];
+        return ['tech_stack' => 'array', 'status' => ProjectStatus::class, 'ends_at' => 'datetime'];
     }
 }
