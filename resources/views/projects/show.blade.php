@@ -1,3 +1,16 @@
-<div>
-    <!-- It is not the man who has too little, but the man who craves more, that is poor. - Seneca -->
-</div>
+<x-layouts.app>
+
+    {{-- Show --}}
+
+    <livewire:projects.show :project="$project" />
+
+    @dump($project)
+
+    {{-- <pre>
+
+        @dd(request())
+
+    </pre> --}}
+
+
+</x-layouts.app>
