@@ -1,3 +1,5 @@
-<div>
-    <!-- It is not the man who has too little, but the man who craves more, that is poor. - Seneca -->
-</div>
+<x-layouts.app>
+
+    <a href="{{ route('projects.show', 1) }}">Primeiro Proejto</a>
+
+</x-layouts.app>
