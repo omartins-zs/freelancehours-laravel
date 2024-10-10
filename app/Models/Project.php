@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\ProjectStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,6 +14,6 @@ class Project extends Model
 
     public function casts()
     {
-        return ['tech_stack' => 'array'];
+        return ['tech_stack' => 'array', 'status' => ProjectStatus::class];
     }
 }
