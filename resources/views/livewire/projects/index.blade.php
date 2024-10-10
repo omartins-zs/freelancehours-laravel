@@ -1,3 +1,13 @@
 <div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
+
+    @foreach ($this->projects as $project)
+        <li>
+            <a href="{{ route('projects.show', $project) }}">
+
+                {{ $project->id }}. {{ $project->title }}
+
+            </a>
+        </li>
+    @endforeach
+
 </div>
