@@ -1,3 +1,5 @@
+@props(['project'])
+
 <x-ui.card class="col-span-2 ">
     <div class="flex items-start justify-between pb-4">
         <div class="flex flex-col gap-[16px]">
