@@ -1,16 +1,7 @@
 <x-layouts.app>
 
-    {{-- Show --}}
+    <livewire:projects.show :$project />
 
-    <livewire:projects.show :project="$project" />
-
-    @dump($project)
-
-    {{-- <pre>
-
-        @dd(request())
-
-    </pre> --}}
-
+    <livewire:projects.proposals :$project />
 
 </x-layouts.app>
