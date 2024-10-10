@@ -26,7 +26,7 @@ class ProjectFactory extends Factory
 
         return [
             'title' => collect(fake()->words(5))->join(' '),
-            'description' => htmlspecialchars(fake()->randomHtml()),
+            'description' => fake()->randomHtml(),
             'ends_at' => fake()->dateTimeBetween('now', '+ 3 days'),
             'status' => fake()->randomElement(['open', 'closed']),
             'tech_stack' => fake()->randomElements(['react', 'vue', 'php', 'javascript', 'python', 'ruby', 'java', 'c#', 'typescript', 'go', 'next-js', 'html', 'css'], random_int(1, 5)),
