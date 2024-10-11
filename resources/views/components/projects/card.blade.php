@@ -1,5 +1,4 @@
 @props(['project'])
-
 <x-ui.card class="col-span-2 ">
     <div class="flex items-start justify-between pb-4">
         <div class="flex flex-col gap-[16px]">
@@ -17,18 +16,10 @@
             </div>
         </div>
         <div>
-
             <livewire:proposals.create :$project />
 
-            <div class="flex items-center justify-between mt-4 text-[14px]">
-                <div class="text-[#8C8C9A]  leading-6">Encerra em:</div>
-                <div class="font-bold flex items-center space-x-1">
-                    <span class="text-white ">01</span><span>:</span>
-                    <span class="text-white ">12</span><span>:</span>
-                    <span class="text-white ">26</span><span>:</span>
-                    <span class="text-white ">64</span>
-                </div>
-            </div>
+            <livewire:projects.timer :$project />
+
         </div>
     </div>
 
