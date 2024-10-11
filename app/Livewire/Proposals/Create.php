@@ -18,10 +18,18 @@ class Create extends Component
 
     #[Rule(['required', 'numeric', 'gt:0'])]
     public int $hours = 0;
+    public bool $agree = false;
 
     public function save()
     {
         $this->validate();
+
+        if (!$this->agree) {
+            $this->addError('agree', 'Você precisa concordar com os termos de uso');
+            return;
+        }
+
+
         // Metodo sem alterar o protected $fillable do Proposal
         // $proposal = new Proposal();
         // $proposal->project_id = $this->project->id;
@@ -30,10 +38,12 @@ class Create extends Component
         // $proposal->save();
 
         // Melhor opção
-        $this->project->proposals()->updateOrCreate([
+        $this->project->proposals()->updateOrCreate(
             ['email' => $this->email],
             ['hours' => $this->hours]
-        ]);
+        );
+
+        $this->modal = false;
     }
     public function render()
     {
