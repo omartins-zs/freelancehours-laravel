@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class Create extends Component
 {
-    public bool $modal = false;
+    public bool $modal = true;
 
     public function render()
     {
