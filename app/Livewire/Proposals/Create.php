@@ -11,9 +11,16 @@ class Create extends Component
 
     public bool $modal = true;
 
-    public string $email;
-    public int $hours;
+    public string $email = '';
+    public int $hours = 0;
 
+    public function save()
+    {
+        $this->project->proposals()->create([
+            'email' => $this->email,
+            'hours' => $this->hours
+        ]);
+    }
     public function render()
     {
         return view('livewire.proposals.create');
