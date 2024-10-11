@@ -8,8 +8,16 @@ use Livewire\Component;
 class Timer extends Component
 {
     public Project $project;
+
     public function render()
     {
-        return view('livewire.projects.timer');
+        $diff = now()->diff($this->project->ends_at);
+
+        return view('livewire.projects.timer', [
+            'days' => $diff->d,
+            'hours' => $diff->h,
+            'minutes' => $diff->i,
+            'seconds' => $diff->s,
+        ]);
     }
 }
