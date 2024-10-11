@@ -4,6 +4,7 @@ namespace App\Livewire\Proposals;
 
 use App\Models\Project;
 use App\Models\Proposal;
+use Livewire\Attributes\Rule;
 use Livewire\Component;
 
 class Create extends Component
@@ -12,11 +13,15 @@ class Create extends Component
 
     public bool $modal = true;
 
+    #[Rule(['required', 'email'])]
     public string $email = '';
+
+    #[Rule(['required', 'numeric', 'gt:0'])]
     public int $hours = 0;
 
     public function save()
     {
+        $this->validate();
         // Metodo sem alterar o protected $fillable do Proposal
         // $proposal = new Proposal();
         // $proposal->project_id = $this->project->id;
