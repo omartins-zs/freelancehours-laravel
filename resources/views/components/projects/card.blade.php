@@ -18,7 +18,7 @@
         </div>
         <div>
 
-            <livewire:proposals.create :project />
+            <livewire:proposals.create :$project />
 
             <div class="flex items-center justify-between mt-4 text-[14px]">
                 <div class="text-[#8C8C9A]  leading-6">Encerra em:</div>
