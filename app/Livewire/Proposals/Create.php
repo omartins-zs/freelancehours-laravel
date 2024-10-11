@@ -25,9 +25,9 @@ class Create extends Component
         // $proposal->save();
 
         // Melhor opção
-        $this->project->proposals()->create([
-            'email' => $this->email,
-            'hours' => $this->hours
+        $this->project->proposals()->updateOrCreate([
+            ['email' => $this->email],
+            ['hours' => $this->hours]
         ]);
     }
     public function render()
