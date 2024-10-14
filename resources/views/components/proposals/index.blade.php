@@ -5,12 +5,12 @@
                 Propostas
             </h2>
             <div class="text-[#8C8C9A] text-[12px]">
-                Publicado há 4 horas
+                Publicado {{ $this->lastProposalTime }}
             </div>
         </div>
         <div class="flex items-center space-x-2">
             <x-ui.icons.people-group class="w-[18px] h-[18px]" />
-            <span>{{ sizeOf($proposals) }}</span>
+            <span>{{ $proposals->total() }}</span>
         </div>
     </div>
 
