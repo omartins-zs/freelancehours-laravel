@@ -68,6 +68,46 @@ php artisan livewire:layout
 
 php artisan livewire:make Teste
 
+Aula 2
+php artisan migrate:fresh
+
+php artisan db:seed
+
+Drop/Create Table Migration/Running Migration/Seed
+pphp artisan migrate:fresh --seed
+
+tailwind css https://tailwindcss.com/docs/guides/laravel
+
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+npm run dev
+php artisan | grep enum
+
+php artisan make:enum
+
+Aula 3
+php artisan http://127.0.0.1:8000 ou configurar o site no path do herd
+
+alpine js
+https://alpinejs.dev/
+
+
+php artisan lang:publish
+radução do Laravel para português brasileiro (pt-BR locale). https://github.com/lucascudo/laravel-pt-BR-localization
+
+opcional depois de tudo : composer uninstall lucascudo/laravel-pt-br-localization --dev
+
+php artisan make:notification
+
+php artisan queue:work
+
+php artisan make:command
+
+php artisan schedule:work
+tail -f storage/logs/laraveel.log
+
 Extensao
 Laravel Blade Snippets
 Php Intelephensense
