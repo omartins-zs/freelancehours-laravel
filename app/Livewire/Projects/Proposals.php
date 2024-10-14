@@ -16,9 +16,8 @@ class Proposals extends Component
     #[Computed()]
     public function proposals()
     {
-        return $this->project->proposals()->orderBy('hours')->simplePaginate($this->qty);
+        return $this->project->proposals()->orderBy('hours')->paginate($this->qty);
     }
-
     #[Computed()]
     public function lastProposalTime()
     {
