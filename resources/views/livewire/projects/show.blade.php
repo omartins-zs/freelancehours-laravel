@@ -2,6 +2,4 @@
 
     <x-projects.card :$project />
 
-    <livewire:proposals.create />
-    
 </div>
