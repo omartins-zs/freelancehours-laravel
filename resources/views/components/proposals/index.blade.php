@@ -21,14 +21,16 @@
             @endforeach
         </div>
 
-        <div class="mt-6">
-            <button
-                class="bg-[#181826] text-white font-bold tracking-wide uppercase px-8 py-3 rounded-[4px]
-                        hover:bg-[#373751] transition duration-300 ease-in-out w-full"
-                wire:click="loadMore">
-                Carregar Mais
-            </button>
-        </div>
+        @if ($proposals->hasMorePages())
+            <div class="mt-6">
+                <button
+                    class="bg-[#181826] text-white font-bold tracking-wide uppercase px-8 py-3 rounded-[4px]
+                    hover:bg-[#373751] transition duration-300 ease-in-out w-full"
+                    wire:click="loadMore">
+                    Carregar Mais
+                </button>
+            </div>
+        @endif
     </div>
 
 </x-ui.card>
