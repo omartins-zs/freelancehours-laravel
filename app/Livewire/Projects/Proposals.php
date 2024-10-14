@@ -15,7 +15,12 @@ class Proposals extends Component
     #[Computed()]
     public function proposals()
     {
-        return $this->proposals()->orderByDesc('hours')->limit($this->qty)->get();
+        return $this->project->proposals()->orderByDesc('hours')->limit($this->qty)->get();
+    }
+
+    public function loadMore()
+    {
+        $this->qty += 10;
     }
 
     public function render()

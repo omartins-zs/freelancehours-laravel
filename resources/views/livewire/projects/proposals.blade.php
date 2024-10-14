@@ -1,1 +1,1 @@
-<x-proposals :proposals="$project->proposals()->orderByDesc('hours')->get()" />
+<x-proposals :proposals="$this->proposals" />
