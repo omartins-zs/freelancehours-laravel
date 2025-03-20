@@ -35,7 +35,8 @@ return [
     |
     */
 
-    'route_path' => 'log-viewer',
+    // 'route_path' => 'log-viewer',
+    'route_path' => 'logs',
 
     /*
     |--------------------------------------------------------------------------
